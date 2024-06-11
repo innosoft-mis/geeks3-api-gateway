@@ -4,11 +4,11 @@ GEEKS 2 : API Gateway
 ## Lab 1 : ติดตั้ง KONG
 
 ```sh
-docker network create kong-net
+sudo docker network create kong-net
 ```
 
 ```sh
-docker run -d --name kong-database \
+sudo docker run -d --name kong-database \
  --network=kong-net \
  -p 5432:5432 \
  -e "POSTGRES_USER=kong" \
@@ -18,7 +18,7 @@ docker run -d --name kong-database \
 ```
 
 ```sh
-docker run --rm --network=kong-net \
+sudo docker run --rm --network=kong-net \
  -e "KONG_DATABASE=postgres" \
  -e "KONG_PG_HOST=kong-database" \
  -e "KONG_PG_PASSWORD=kongpass" \
@@ -26,7 +26,7 @@ kong:3.7.0 kong migrations bootstrap
 ```
 
 ```sh
-docker run -d --name kong-gateway \
+sudo docker run -d --name kong-gateway \
 --network=kong-net \
 -e "KONG_DATABASE=postgres" \
 -e "KONG_PG_HOST=kong-database" \

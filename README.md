@@ -3,6 +3,8 @@ GEEKS 2 : API Gateway
 
 ## Lab 1 : ติดตั้ง KONG
 
+https://docs.konghq.com/gateway/3.7.x/install/docker/?install=oss
+
 ```sh
 sudo docker network create kong-net
 ```
@@ -44,4 +46,11 @@ sudo docker run -d --name kong-gateway \
 -p 127.0.0.1:8002:8002 \
 -p 127.0.0.1:8444:8444 \
 kong:3.7.0
+```
+```sh
+curl -i -X GET --url http://localhost:8001/services
+```
+```sh
+http://localhost:8002
+
 ```

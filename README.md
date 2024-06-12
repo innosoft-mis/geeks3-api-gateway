@@ -1,6 +1,11 @@
 # geeks2-api-gateway
 GEEKS 2 : API Gateway
 
+## Lab 0 : docker image pull
+```sh
+sudo docker image pull postgres:13
+sudo docker image pull kong:3.7.0
+```
 ## Lab 1 : ติดตั้ง KONG
 สร้าง folder ใหม่ ชื่อ kong
 ```

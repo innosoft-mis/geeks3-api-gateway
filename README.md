@@ -2,7 +2,12 @@
 GEEKS 2 : API Gateway
 
 ## Lab 1 : ติดตั้ง KONG
-
+สร้าง folder ใหม่ ชื่อ kong
+```
+mkdir kong
+cd kong
+```
+สร้างไฟล์ docker-compose.yml ด้วยเนื้อหาดังนี้
 ```yml
 version: '3'
 volumes:
@@ -56,4 +61,8 @@ services:
       - 127.0.0.1:8001:8001
       - 127.0.0.1:8002:8002
       - 127.0.0.1:8444:8444
+```
+ใช้คำสั่ง
+```sh
+sudo docker-compose up -d
 ```

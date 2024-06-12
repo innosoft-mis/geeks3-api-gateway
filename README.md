@@ -66,3 +66,7 @@ services:
 ```sh
 sudo docker-compose up -d
 ```
+ถ้าการติดตั้งสมบูรณ์จะสามารถเข้าดู KONG manager ได้ผ่าน Web browser ที่
+```
+http://localhost:1337
+```

@@ -75,4 +75,8 @@ sudo docker-compose up -d
 ```
 http://localhost:8002
 ```
+
+## งานสรุป Data Pipeline and API
 ![งานสรุป Data Pipeline and API](image.png)
+
+เฉลยอยู่ [ตรงนี้](final.zip) นะครับ ^__^

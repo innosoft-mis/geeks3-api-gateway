@@ -75,3 +75,4 @@ sudo docker-compose up -d
 ```
 http://localhost:8002
 ```
+![งานสรุป Data Pipeline and API](image.png)

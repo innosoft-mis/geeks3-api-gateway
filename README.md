@@ -79,4 +79,4 @@ http://localhost:8002
 ## งานสรุป Data Pipeline and API
 ![งานสรุป Data Pipeline and API](image.png)
 
-เฉลยอยู่ [ตรงนี้](final.zip) นะครับ ^__^
+เฉลยอยู่ [ตรงนี้](https://github.com/innosoft-mis/geeks2-api-gateway/raw/main/final.zip) นะครับ ^__^

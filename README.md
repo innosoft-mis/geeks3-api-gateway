@@ -1,5 +1,5 @@
-# geeks2-api-gateway
-GEEKS 2 : API Gateway
+# geeks3-api-gateway
+GEEKS 3 : API Gateway
 
 ## Lab 0 : docker image pull
 ```sh

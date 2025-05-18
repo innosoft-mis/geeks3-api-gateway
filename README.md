@@ -69,14 +69,9 @@ services:
 ```
 ใช้คำสั่ง
 ```sh
-sudo docker-compose up -d
+docker-compose up -d
 ```
 ถ้าการติดตั้งสมบูรณ์จะสามารถเข้าดู KONG manager ได้ผ่าน Web browser ที่
 ```
 http://localhost:8002
 ```
-
-## งานสรุป Data Pipeline and API
-![งานสรุป Data Pipeline and API](image.png)
-
-เฉลยอยู่ [ตรงนี้](https://github.com/innosoft-mis/geeks2-api-gateway/raw/main/final.zip) นะครับ ^__^

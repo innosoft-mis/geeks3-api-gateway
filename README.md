@@ -92,6 +92,7 @@ def create_consumer(username):
     payload = {
         "username": username
     }
+    response = requests.post(url, json=payload)
 
 # 2. สร้าง API Key ให้ Consumer
 def create_api_key(username, custom_key=None):

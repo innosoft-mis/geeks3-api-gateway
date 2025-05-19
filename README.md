@@ -78,7 +78,7 @@ http://localhost:8002
 
 # Lab เพิ่มเติม : Admin API
 
-```
+```python
 import requests
 
 # ตั้งค่าพื้นฐาน

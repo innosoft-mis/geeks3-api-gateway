@@ -75,3 +75,46 @@ docker-compose up -d
 ```
 http://localhost:8002
 ```
+
+# Lab เพิ่มเติม : Admin API
+
+```
+import requests
+
+# ตั้งค่าพื้นฐาน
+KONG_ADMIN_URL = "http://localhost:8001"
+consumer_username = "example_user"
+api_key_value = "my-custom-api-key"  # หรือ None ให้ Kong generate ให้เอง
+
+# 1. สร้าง Consumer
+def create_consumer(username):
+    url = f"{KONG_ADMIN_URL}/consumers"
+    payload = {
+        "username": username
+    }
+
+# 2. สร้าง API Key ให้ Consumer
+def create_api_key(username, custom_key=None):
+    url = f"{KONG_ADMIN_URL}/consumers/{username}/key-auth"
+    payload = {}
+    if custom_key:
+        payload["key"] = custom_key
+    response = requests.post(url, json=payload)
+
+# 3. แสดง API Key ทั้งหมดของ Consumer
+def list_api_keys(username):
+    url = f"{KONG_ADMIN_URL}/consumers/{username}/key-auth"
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        keys = data.get("data", [])
+        if keys:
+            for i, key_data in enumerate(keys, start=1):
+                print(f"{key_data['key']}")
+
+# เรียกใช้งาน
+create_consumer(consumer_username)
+create_api_key(consumer_username, api_key_value)
+list_api_keys(consumer_username)
+
+```
